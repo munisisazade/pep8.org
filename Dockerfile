@@ -13,4 +13,4 @@ RUN apk update --no-cache \
 
 EXPOSE 8154 
 
-CMD ["python","-m","http.server","8154"]
+CMD ["python3","-m","http.server","8154"]
