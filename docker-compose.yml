@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+
+  pep:
+    container_name: pep8
+    build: .
+    environment:
+      - VIRTUAL_HOST=pep8.mpy.az
+      - VIRTUAL_PORT=8154
+    volumes:
+      - .:/code
+    ports:
+      - "8154:8154"
+
+networks:
+  default:
+    external:
+      name: nginx-proxy
